@@ -1,0 +1,892 @@
+<html>
+<head>
+<style>
+/*Base*/
+body {
+margin: 0px;
+font-family: "proxima-nova", sans-serif;
+}
+
+
+.MyButton {
+display: block;
+width: 100%;
+padding-left: 0;
+padding-right: 0;
+border:none;
+color:white;
+height:60px;
+font-size:1.25em;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.MyButton.top {
+margin-top: 0px;
+}
+
+.MyButton span {
+color:#eee;
+}
+.MyButton:hover {
+background-color:#eee;
+}
+
+.blueBackground {
+background-color:#0e90d2;
+}
+.redBackground {
+background-color:#dd514c;
+}
+.greenBackground {
+background-color:#5eb95e;
+}
+.purpleBackground {
+background-color: rgb(128, 88, 165);
+}
+.orangeBackground {
+background-color: rgb(243, 123, 29);
+}
+
+.blueBackground:hover {
+background-color:#0E8AC9;
+}
+.redBackground:hover {
+background-color:#C74A45;
+}
+.greenBackground:hover {
+background-color:#55AA55;
+}
+.purpleBackground:hover {
+background-color: rgb(128, 88, 145);
+}
+.orangeBackground:hover {
+background-color: rgb(243, 103, 9);
+}
+
+.MyButton.blueBackground span {
+color:rgb(103, 194, 240);
+}
+.MyButton.redBackground span {
+color:rgb(236, 164, 154);
+}
+.MyButton.greenBackground span {
+color:rgb(161, 240, 137);
+}
+
+
+
+
+#img {
+background-color:#eee;
+height :300px;
+}
+
+.white {
+color:#fff;
+}
+.red {
+color:#dd514c
+}
+.green {
+color:#5eb95e
+}
+
+
+.media, .media-body {
+
+margin-top: 50px;
+}
+
+
+
+
+
+#footer {
+text-align:center;
+}
+#footer a {
+margin-left: 20px;
+color: #9B9D9E;
+text-decoration: none;
+font-family: "proxima-nova", sans-serif;
+
+}
+
+p.NoMarginOnBottom {
+margin-bottom:5px;
+padding-top: 5px;
+
+}
+
+#NormalH1 {
+
+font-family: "proxima-nova", sans-serif;
+font-weight: 100;
+color:rgb(75, 75, 75);
+font-size:400%;
+}
+
+#header {
+height: 64px;
+background-color: black;
+color: white;
+font-family: "proxima-nova", sans-serif;
+}
+#header h1 {
+font-size : 2em;
+
+}
+
+.lead {
+padding-top: 30px;
+font-family: "proxima-nova", sans-serif;
+
+
+}
+.marketing .col-md-4 {
+margin-bottom: 20px;
+text-align: center;
+}
+#belowheader {
+width: 840px;
+margin: 0 auto;
+text-align: center;
+padding-bottom: 40px;
+padding-top: 11px;
+letter-spacing: 6px;
+}
+#userIcon {
+background-color:#0e90d2;
+height: 200px;
+margin: auto;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+#userIcon:hover {
+background-color:#0E8AC9;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+
+.MainButtonPadding {
+padding-top:35px;
+}
+
+#multiplayerIcon {
+background-color:#dd514c;
+height: 200px;
+margin: auto;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+#multiplayerIcon:hover {
+background-color:#C74A45;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+#testIcon {
+background-color:#5eb95e;
+height: 200px;
+margin: auto;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+#testIcon:hover {
+background-color:#55AA55;
+transition-duration: 0.3s;
+-webkit-transition-duration: 0.3s; /* Safari */
+}
+
+#NoShadow {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+.grey {
+color :#DAD8D8;
+}
+
+
+.glyphicon {
+padding: 5px;
+font-size:2em;
+}
+
+/*layout*/
+
+#Course {
+display:none;
+}
+
+#Question {
+display:none;
+
+
+}
+
+#SignUp {
+display:none;
+
+}
+
+#Dashboard {
+display:none;
+
+
+}
+#TeacherAdmin{
+display:none;
+
+}
+
+
+
+
+
+
+</style>
+
+<!-- JQuery -->
+<script src="/js/jquery-1.10.2.js"></script>
+
+<!-- Bootstrap-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+    <!-- Static navbar -->
+    <div id="NoShadow" class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="HomeButton" class="navbar-brand" href="#">iTheory</a>
+        </div>
+          
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="DashboardButton" href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="SignUpButton" href="#">Sign Up</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+<!-- Landing Page -->
+
+    <div class="container marketing">
+		<div id="LandingPage">
+		<div id='belowheader'><h1 id="NormalH1">Learn &nbsp;&nbsp; Think &nbsp;&nbsp;  Create</h1></div> 
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div id="SinglePlayerButton" class="col-md-4">
+          <div id="userIcon"><img class="MainButtonPadding" src = "images/IconUser.png"></div>
+          <p  class="lead">Single Player Training</p>
+        </div><!-- /.col-lg-4 -->
+        <div id="MultiPlayerButton" class="col-md-4">
+          <div id="multiplayerIcon"><img class="MainButtonPadding" src = "images/IconGroup.png"></div>
+          <p class="lead">Multiplayer Tournament</p>
+        </div><!-- /.col-lg-4 -->
+        <div id="TakeATestButton" class="col-md-4">
+          <div id="testIcon"><img class="MainButtonPadding" src = "images/IconConference.png"></div>
+          <p class="lead">Take a Test</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+<hr>
+</div>
+<!--  About -- >
+
+
+
+<!-- Choose a Course-->
+
+<div id="Course">
+	<p class="lead text-center">Please choose a training course.</p>
+      <!-- Three columns of text below the carousel -->
+      
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+         <select class="form-control">
+ 			 <option>Music Theory</option>
+ 			 <option>Music History</option>
+ 			 <option>Science Chemistry</option>
+ 			 <option>Science Biology</option>
+		</select>
+			<br>
+			<p class="small">*You are a guest.  To save your progress please <a class="SignUpButton">sign up.</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+<!-- Choose A Test -->
+
+<div class="col-md-4 ">
+<button type="button" class="MyButton blueBackground">Easy <span>(0/30)</span></button>
+</div>
+<div class="col-md-4 ">
+<button type="button" class="MyButton redBackground">Medium <span>(0/27)</span></button>
+</div>
+<div class="col-md-4 ">
+<button type="button" class="MyButton greenBackground">Hard <span>(0/32)</span></button>
+</div>
+
+<!-- Tests -->
+
+<div class="row">
+	<div class="col-md-12 ">
+		<h3>Easy</h3>
+			<table id="TableButton" class="table table-striped table-hover">		
+  			<tr >
+  				<td><strong>Pitch</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is there such a thing as perfect sound?</td>
+  				
+  			</tr>
+  			<tr>
+  				<td><strong>Octaves</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What patterns occur naturally in the world?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Notes on a Keyboard</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why is an A not a C?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Clefs</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What happens when you sloppily copy music notation?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Notes on a Staff</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are notes on a staff similar to a path on a graph?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Steps and Half Steps</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is half a step like half a circle?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Patterns</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are there any patterns in a major scale?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Degrees</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I use numbers instead of the musical alphabet?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Tetrachords</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What the?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Accidentals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why are there are accidents in music?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Enharmonic Intervals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I impress my friends with really big words?</td>
+  			</tr>
+		</table>
+		
+		
+		
+		
+	</div>
+		
+	<div class="col-md-12 ">
+		<h3>Medium</h3>
+			<table class="table table-striped">		
+  			<tr>
+  				<td><strong>Pitch</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is there such a thing as perfect sound?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Octaves</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What patterns occur naturally in the world?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Notes on a Keyboard</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why is an A not a C?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Clefs</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What happens when you sloppily copy music notation?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Notes on a Staff</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are notes on a staff similar to a path on a graph?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Steps and Half Steps</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is half a step like half a circle?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Patterns</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are there any patterns in a major scale?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Degrees</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I use numbers instead of the musical alphabet?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Tetrachords</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What the?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Accidentals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why are there are accidents in music?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Enharmonic Intervals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I impress my friends with really big words?</td>
+  			</tr>
+		</table>
+	</div>
+	<div class="col-md-12 ">
+		<h3>Hard</h3>
+			<table class="table table-striped">		
+  			<tr>
+  				<td><strong>Pitch</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is there such a thing as perfect sound?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Octaves</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What patterns occur naturally in the world?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Notes on a Keyboard</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why is an A not a C?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Clefs</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What happens when you sloppily copy music notation?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Notes on a Staff</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are notes on a staff similar to a path on a graph?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Steps and Half Steps</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Is half a step like half a circle?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Patterns</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Are there any patterns in a major scale?</td>
+  			</tr>  			
+  			<tr>
+  				<td><strong>Major Scale Degrees</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I use numbers instead of the musical alphabet?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Tetrachords</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>What the?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Accidentals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Why are there are accidents in music?</td>
+  			</tr>
+  			<tr>
+  				<td><strong>Enharmonic Intervals</strong></td>
+  				<td><small>Not Completed</small></td>
+  				<td>Can I impress my friends with really big words?</td>
+  			</tr>
+		</table>
+	</div>		
+
+
+</div>
+
+
+<hr>
+</div>
+<div id="Question"><!-- Question -->
+	
+	<div class="row">
+		<div class="col-md-12 ">
+				<p class="lead text-center">What is the name of this note?</p>
+				
+				<p class="text-center">
+				
+					<span class="glyphicon glyphicon glyphicon-ok white greenBackground"></span>
+					<span class="glyphicon glyphicon glyphicon-remove white redBackground"></span>
+					<span class="glyphicon glyphicon glyphicon-remove white redBackground"></span>
+					<span class="glyphicon glyphicon glyphicon-remove white redBackground"></span>
+					<span class="glyphicon glyphicon glyphicon-remove white redBackground"></span>
+					<span class="glyphicon glyphicon glyphicon-remove white redBackground"></span>
+				</p>
+				<p class="text-center small">Get six correct answers in a row to pass this test.
+				</p>
+		</div>
+		</div>
+		
+			<div class="row">
+				<div class="col-md-4 ">
+					<button class="MyButton top">A</button>
+					<button class="MyButton">E</button>
+					<button class="MyButton">C</button>
+					<button class="MyButton">D</button>												
+				
+				</div>
+				<div class="col-md-8 ">
+					<div id="img">	
+						<p class="lead text-center">Picture goes here</p>
+					</div>
+				</div>
+			</div>
+	
+	<div class="row">
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton blueBackground">Home</button>
+	</div>
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton redBackground">Answers</button>
+	</div>
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton greenBackground">Help</button>
+	</div>
+	</div>
+<hr>
+
+</div>
+<div id="SignUp"><!-- Sign Up -->
+
+<div class="row">
+	<p class="lead text-center">Sign up to track your progress and take tests.</p>
+
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<h3>Sign Up</h3>
+			<form role="form">
+ 				 <div class="form-group">
+    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+ 				 </div>
+ 				 <div class="form-group">
+    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+ 				 </div>
+ 				 <div class="form-group">
+ 				   	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				 <div class="form-group">
+ 				   	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="School Code">
+ 				   	<small>*You can still sign up if you dont' have  school code.</small>
+				  </div>
+				    <div class="checkbox">
+   					 <label>
+    				  <input type="checkbox"> Select this if you are a teacher.
+    				</label>
+ 					 </div>
+
+			  <button type="submit" class="MyButton purpleBackground">Sign Up</button>
+			  <button type="submit" class="MyButton greenBackground">Sign Up with Google</button>
+			  <button type="submit" class="MyButton blueBackground">Sign Up with Facebook</button>
+			</form>
+	</div>
+	<div class="col-md-6">
+		<h3>Log In</h3>
+			<form role="form">
+ 				 <div class="form-group">
+    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+ 				 </div>
+
+ 				 <div class="form-group">
+ 				   	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+
+
+			  <button type="submit" class="MyButton orangeBackground">Login</button>
+			</form>
+	</div>
+	
+	
+
+
+</div>
+<hr>
+</div>
+<div id="Dashboard"><!-- Dashboard -->
+
+<div class="row">
+	<div class="col-md-4">
+
+		<div class="media">
+ 			 <a class="pull-left" href="#">
+  				  <img class="img-circle media-object" src="images/holder.svg" alt="...">
+ 			 </a>
+ 		 <div class="media-body text-left">
+   			 <h3 class="media-heading">Guest</h3>
+   			 <p><a class="SignUpButton">Create an Account</a></p>
+  		</div>
+	</div>
+		<br>
+		<form role="form">
+
+ 				 <div class="form-group">
+ 				   	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Change Password">
+				  </div>
+				 <div class="form-group">
+ 				   	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="School Code">
+				  </div>
+         <select class="form-control">
+ 			 <option>Year 7.1</option>
+ 			 <option>Year 8.2</option>
+ 			 <option>Johnson's Class</option>
+ 			 <option>Science Biology</option>
+		</select>
+		<div class="text-left">
+		<p><Strong>Classes</strong></p>
+		<p>Year Seven Music</p>
+		<p>Year Seven Science</p>
+</div>
+			  <button type="submit" class="MyButton purpleBackground">Save</button>
+
+			</form>		
+	</div>
+	<div class="col-md-8">
+		<h3>Rankings</h3>
+		<table class="table table-striped text-center">	
+			<thead >
+			<tr>
+			
+				<th class="text-center">#</th>
+				<th class="text-center">Username</th>			
+				<th class="text-center">School</th>
+				<th class="text-center">Completed</th>	
+			</tr>
+			</thead>
+  			<tr>
+  				<td>1</td>
+  				<td>Little Johnny</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">57</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>2</td>
+  				<td>Bobby</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">47</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>3</td>
+
+  				<td>Jenny</td>
+  				<td>ACBC</td>
+  				<td >completed <span class="badge">42</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>4</td>
+
+  				<td>Geoff</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">31</span></td>
+  			</tr>  	
+  			  			<tr>
+  				<td>5</td>
+  				<td>Little Johnny</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">27</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>6</td>
+  				<td>Bobby</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">24</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>7</td>
+
+  				<td>Jenny</td>
+  				<td>ACBC</td>
+  				<td >completed <span class="badge">19</span></td>
+  			</tr>
+  			<tr>
+  				  				<td>8</td>
+
+  				<td>Geoff</td>
+  				<td>Carey</td>
+  				<td >completed <span class="badge">18</span></td>
+  			</tr>  	
+  					
+  			
+		</table>
+		
+	</div>
+</div>
+<hr>
+</div>
+
+
+<div id="TeacherAdmin"><!-- Teacher Admin -->
+	<div class="row">
+		<div class=" col-md-offset-4 col-md-4 text-center">
+			<form role="form">
+ 				 <div class="form-group">
+    				<p class="lead">Please enter a School Code.</p>
+    				<p>Students need to this code so you can track their progress and set exams.</p>
+    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="School Code">
+ 				 </div>
+			</form>
+		</div>
+	</div>
+<div class="row">
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton blueBackground">Results</button>
+	</div>
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton redBackground">Create an Exam</button>
+	</div>
+	<div class="col-md-4 ">
+		<button type="button" class="MyButton greenBackground">Admin</button>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- Site footer -->
+
+	  <footer>
+        <p id="footer">&copy; iTheory 2014
+        <a id="TeacherAdminButton" href="#">Admin</a> 
+        <a class="SignUpButton" href="#">Sign Up/Login</a>  
+        <a href="#">Create a School</a>  
+        <a href="#">Contact</a></p>
+      </footer>
+      
+
+
+</div>
+
+</body>
+ <!-- Footer
+================================================== -->
+<script>
+
+$( "#SinglePlayerButton" ).click(function() {
+  $( "#HymnTeam" ).show();
+  $( "#Home" ).hide	();
+    $( "#about" ).hide ();
+
+});
+
+$( "#MultiPlayerButton" ).click(function() {
+  $( "#HymnTeam" ).hide();
+  $( "#Home" ).hide	();
+    $( "#about" ).show ();
+
+});
+$( "#TeacherAdminButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).hide();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).hide	();
+	$( "#TeacherAdmin" ).show	();
+    
+});
+$( "#TableButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).hide();
+    $( "#Question" ).show();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).hide	();
+    	$( "#TeacherAdmin" ).hide	();
+
+});
+$( "#HomeButton" ).click(function() {
+    $( "#LandingPage" ).show();
+    $( "#Course" ).hide();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).hide	();
+        	$( "#TeacherAdmin" ).hide	();
+
+});
+$( ".SignUpButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).hide();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).show	();
+        	$( "#TeacherAdmin" ).hide	();
+
+});
+$( "#DashboardButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).hide();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).show();
+    $( "#SignUp" ).hide	();
+        	$( "#TeacherAdmin" ).hide	();
+
+});
+$( "#SinglePlayerButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).show();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).hide	();
+        	$( "#TeacherAdmin" ).hide	();
+
+});
+$( "#TakeATestButton" ).click(function() {
+    $( "#LandingPage" ).hide();
+    $( "#Course" ).hide();
+    $( "#Question" ).hide();
+    $( "#Dashboard" ).hide();
+    $( "#SignUp" ).show	();
+        	$( "#TeacherAdmin" ).hide	();
+
+});
+</script>
+
+
+
+</html>
